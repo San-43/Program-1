@@ -156,7 +156,6 @@ bool geometric() {
             SetConsoleTextAttribute(hConsole, 12);
             n = valueInt(n);
 
-            SetConsoleTextAttribute(hConsole, 10);
             for (int i = 1; i <= n; ++i) {
                 SetConsoleTextAttribute(hConsole, 5);
                 cout << "\t\t" << "a" << setfill('0') << setw(2) << i;
@@ -215,7 +214,6 @@ bool arithmetic() {
             SetConsoleTextAttribute(hConsole, 12);
             n = valueInt(n);
 
-            SetConsoleTextAttribute(hConsole, 10);
             for (int i = 1; i <= n; ++i) {
                 SetConsoleTextAttribute(hConsole, 5);
                 cout << "\t\t" << "a" << setfill('0') << setw(2) << i;
