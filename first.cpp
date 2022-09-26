@@ -6,7 +6,7 @@
 #include <cstring>
 #include <clocale>
 
-char askOption();
+int askOption();
 bool arithmetic();
 bool geometric();
 bool askForBack();
@@ -39,27 +39,27 @@ int main() {
 
         /// Main menu.
         switch (askOption()) {
-            case '1':
+            case 1:
                 if (arithmetic()) {
                     isBack = true;
                 } else {
                     isBack = false;
                 }
                 break;
-            case '2':
+            case 2:
                 if (geometric()) {
                     isBack = true;
                 } else {
                     isBack = false;
                 }
                 break;
-            case '3':
+            case 3:
                 cout << "Good Bye!!!!\n";
                 return 0;
             default:
                 SetConsoleTextAttribute(hConsole, 13);
                 cout << "Error seleccionando una opción.\n";
-                cout << "Por favor revice las opciones al inicio del programa\n";
+                cout << "Por favor revise las opciones al inicio del programa\n";
                 isBack = true;
         }
         if(!(isBack)) {
@@ -90,30 +90,22 @@ bool askForBack() {
     return true;
 }
 
-char askOption() {
-    char option;
+int askOption() {
+    int n;
 
-    do {
-        SetConsoleTextAttribute(hConsole, 13); /// Cambia de color el texto a morado claro
-        cout << "\t"<<"Seleccione una opción ---> ";
+    SetConsoleTextAttribute(hConsole, 13); /// Cambia de color el texto a morado claro
+    cout << "\t"<<"Seleccione una opción ---> ";
 
+    cin.clear();
+    SetConsoleTextAttribute(hConsole, 12); /// Cambia de color el texto a rojo claro
+    if (!(cin >> n) || n <= 0 ) {
         cin.clear();
-        SetConsoleTextAttribute(hConsole, 12); /// Cambia de color el texto a rojo claro
-        cin >> option;
-
-        if (isalnum(option)) {
-            system("cls");
-            break;
-        }else {
-            SetConsoleTextAttribute(hConsole, 13); /// Cambia de color el texto a morado claro
-            cout << "\nError en la entrada...\n";
-            cin.clear();
-            cin.ignore(numeric_limits<char>::max(), '\n');
-            continue;
-        }
-    }while (true);
-
-    return option;
+        cin.ignore(numeric_limits<int>::max(), '\n');
+        return 0;
+    }else {
+        cout << endl;
+        return n;
+    }
 }
 
 bool geometric() {
@@ -135,7 +127,7 @@ bool geometric() {
     cout << "\t\t" << "+----------++-----------------------------++-----------+" << endl << endl;
 
     switch (askOption()) {
-        case '1':
+        case 1:
             system("cls");
             SetConsoleTextAttribute(hConsole, 10);
             cout << "\t\t" << "--> Ingrese el valor inicial: ";
@@ -167,15 +159,15 @@ bool geometric() {
                 cout << endl;
             }
             return true;
-        case '2':
+        case 2:
             return true;
-        case '3':
+        case 3:
             cout << "Good Bye!!!!\n";
             return false;
         default:
             SetConsoleTextAttribute(hConsole, 10);
             cout << "Error seleccionando una opción.\n";
-            cout << "Por favor revice las opciones...\n";
+            cout << "Por favor revise las opciones...\n";
             return true;
     }
 }
@@ -198,7 +190,7 @@ bool arithmetic() {
     cout << "\t\t" << "+----------++-----------------------------++-----------+" << endl << endl;
 
     switch (askOption()) {
-        case '1':
+        case 1:
             system("cls");
             SetConsoleTextAttribute(hConsole, 10);
             cout << "\t\t" << "--> Ingrese el valor inicial: ";
@@ -226,15 +218,15 @@ bool arithmetic() {
                 init += d;
             }
             return true;
-        case '2':
+        case 2:
             return true;
-        case '3':
+        case 3:
             cout << "Good Bye!!!!\n";
             return false;
         default:
             SetConsoleTextAttribute(hConsole, 10);
             cout << "Error seleccionando una opción.\n";
-            cout << "Por favor revice las opciones...\n";
+            cout << "Por favor revise las opciones...\n";
             return true;
     }
 
