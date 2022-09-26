@@ -4,6 +4,7 @@
 #include <limits>
 #include <iomanip>
 #include <cstring>
+#include <clocale>
 
 char askOption();
 bool arithmetic();
@@ -18,6 +19,9 @@ const auto hConsole = GetStdHandle(STD_OUTPUT_HANDLE );
 
 int main() {
     bool isBack;
+
+    setlocale(LC_CTYPE, "spanish");
+
     do {
         isBack = false;
 
