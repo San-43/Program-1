@@ -37,6 +37,7 @@ int main() {
         cout << "\t\t" << "|----------|| 3) SALIR                   ||-----------|" << endl;
         cout << "\t\t" << "+----------++----------------------------++-----------+" << endl << endl;
 
+        /// Main menu.
         switch (askOption()) {
             case '1':
                 if (arithmetic()) {
@@ -56,7 +57,7 @@ int main() {
                 cout << "Good Bye!!!!\n";
                 return 0;
             default:
-                SetConsoleTextAttribute(hConsole, 13); /// Cambia de color el texto a morado claro
+                SetConsoleTextAttribute(hConsole, 13);
                 cout << "Error seleccionando una opción.\n";
                 cout << "Por favor revice las opciones al inicio del programa\n";
                 isBack = true;
