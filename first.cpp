@@ -91,20 +91,20 @@ bool askForBack() {
 }
 
 int askOption() {
-    int n;
+    int option;
 
     SetConsoleTextAttribute(hConsole, 13); /// Cambia de color el texto a morado claro
     cout << "\t"<<"Seleccione una opción ---> ";
 
     cin.clear();
     SetConsoleTextAttribute(hConsole, 12); /// Cambia de color el texto a rojo claro
-    if (!(cin >> n) || n <= 0 ) {
+    if (!(cin >> option) || option <= 0 ) {
         cin.clear();
         cin.ignore(numeric_limits<int>::max(), '\n');
         return 0;
     }else {
         cout << endl;
-        return n;
+        return option;
     }
 }
 
