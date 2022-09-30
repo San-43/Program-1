@@ -112,6 +112,10 @@ int askOption() {
 
 /// Función que trabaja con la sucesión geométrica
 bool geometric() {
+    int n;
+    double init;
+    double numerator;
+    double denominator;
 
     system("cls"); // Limpia la consola
     SetConsoleTextAttribute(hConsole, 10); // Cambia de color el texto a verde
@@ -127,12 +131,6 @@ bool geometric() {
 
     switch (askOption()) {
         case 1:
-
-            int n;
-            double init;
-            double numerator;
-            double denominator;
-
             system("cls");
             SetConsoleTextAttribute(hConsole, 10);
             cout << "\t\t" << "--> Ingrese el valor inicial: ";
@@ -180,6 +178,9 @@ bool geometric() {
 
 /// Función que trabaja con la sucesión aritmética
 bool arithmetic() {
+    int n;
+    double init;
+    double d;
 
     system("cls"); // Limpia la consola
     SetConsoleTextAttribute(hConsole, 10); // Cambia de color el texto a verde
@@ -195,11 +196,6 @@ bool arithmetic() {
 
     switch (askOption()) {
         case 1:
-
-            int n;
-            double init;
-            double d;
-
             system("cls");
             SetConsoleTextAttribute(hConsole, 10);
             cout << "\t\t" << "--> Ingrese el valor inicial: ";
