@@ -241,7 +241,7 @@ bool arithmetic() {
 double value(double x) {
 
     do {
-        if (!(cin >> x) || x <= 0 ) {
+        if (!(cin >> x)) {
             cin.clear();
             cin.ignore(numeric_limits<int>::max(), '\n');
             cout << "\nError... Valor incorrecto...\n";
