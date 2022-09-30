@@ -143,7 +143,7 @@ bool geometric() {
             numerator = value(numerator);
 
             SetConsoleTextAttribute(hConsole, 10);
-            cout << "\t\t" << "--> Ingrese el numerador de la razón común: ";
+            cout << "\t\t" << "--> Ingrese el denominador de la razón común: ";
             SetConsoleTextAttribute(hConsole, 12);
             denominator = value(denominator);
 
