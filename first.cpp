@@ -28,11 +28,11 @@ int main() {
         system("cls");
         SetConsoleTextAttribute(hConsole, 13); /// Cambia de color el texto a morado claro
         cout << "\t\t" << "+---------------++------------------++----------------+" << endl;
-        cout << "\t\t" << "|---------------||     SUCESION     ||----------------|" << endl;
+        cout << "\t\t" << "|---------------||     SUCESIÓN     ||----------------|" << endl;
         cout << "\t\t" << "+----------++---++------------------++---++-----------+" << endl;
-        cout << "\t\t" << "|----------|| 1) ARITMETICA              ||-----------|" << endl;
+        cout << "\t\t" << "|----------|| 1) ARITMÉTICA              ||-----------|" << endl;
         cout << "\t\t" << "+----------++----------------------------++-----------+" << endl;
-        cout << "\t\t" << "|----------|| 2) GEOMETRICA              ||-----------|" << endl;
+        cout << "\t\t" << "|----------|| 2) GEOMÉTRICA              ||-----------|" << endl;
         cout << "\t\t" << "+----------++----------------------------++-----------+" << endl;
         cout << "\t\t" << "|----------|| 3) SALIR                   ||-----------|" << endl;
         cout << "\t\t" << "+----------++----------------------------++-----------+" << endl << endl;
@@ -120,7 +120,7 @@ bool geometric() {
     system("cls"); // Limpia la consola
     SetConsoleTextAttribute(hConsole, 10); // Cambia de color el texto a verde
     cout << "\t\t" << "+------------------------------------------------------+" << endl;
-    cout << "\t\t" << "|--------------|| SUCESION ARITMETICA ||---------------|" << endl;
+    cout << "\t\t" << "|--------------|| SUCESIÓN GEOMÉTRICA ||---------------|" << endl;
     cout << "\t\t" << "+----------++--++---------------------++--++-----------+" << endl;
     cout << "\t\t" << "|----------|| 1) INGRESAR VALORES         ||-----------|" << endl;
     cout << "\t\t" << "+----------++-----------------------------++-----------+" << endl;
@@ -185,7 +185,7 @@ bool arithmetic() {
     system("cls"); // Limpia la consola
     SetConsoleTextAttribute(hConsole, 10); // Cambia de color el texto a verde
     cout << "\t\t" << "+------------------------------------------------------+" << endl;
-    cout << "\t\t" << "|--------------|| SUCESION ARITMETICA ||---------------|" << endl;
+    cout << "\t\t" << "|--------------|| SUCESION ARITMÉTICA ||---------------|" << endl;
     cout << "\t\t" << "+----------++--++---------------------++--++-----------+" << endl;
     cout << "\t\t" << "|----------|| 1) INGRESAR VALORES         ||-----------|" << endl;
     cout << "\t\t" << "+----------++-----------------------------++-----------+" << endl;
