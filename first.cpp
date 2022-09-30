@@ -73,6 +73,7 @@ int main() {
     return 0;
 }
 
+///Función para preguntar al usuario si desea correr nuevamente el programa.
 bool askForBack() {
     char isBack[1];
 
@@ -90,6 +91,7 @@ bool askForBack() {
     return true;
 }
 
+///Función utilizada para obtener las opción seleccionada en el switch
 int askOption() {
     int option;
 
@@ -108,6 +110,7 @@ int askOption() {
     }
 }
 
+/// Función que trabaja con la sucesión geométrica
 bool geometric() {
     int n;
     double init;
@@ -172,6 +175,8 @@ bool geometric() {
     }
 }
 
+
+/// Función que trabaja con la sucesión aritmética
 bool arithmetic() {
     int n;
     double init;
@@ -232,6 +237,7 @@ bool arithmetic() {
 
 }
 
+/// Función para obtener los valores tipo double
 double value(double x) {
 
     do {
@@ -248,6 +254,7 @@ double value(double x) {
     return x;
 }
 
+/// Función para obtener los valores tipo int
 int valueInt(int n) {
     do {
         if (!(cin >> n) || n <= 0 ) {
